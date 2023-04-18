@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles-2.css">
+<title>lab 6</title>
+<!--Ruheen Vahora. CSCE 102, 13, 2/1/2023-->
+</head>
+<body>
+	<div id="content">
+	<header>
+		<h1>Main Heading</h1>
+	</header>
+	<nav id="main-nav">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="two-cols.html">Tables</a></li>
+		</ul>
+	</nav>
+
+<main>
+<table id="game-board">
+<tr>
+<td id="1"></td>
+<td id="2"></td>
+<td id="3"></td>
+</tr>
+<tr>
+<td id="4"></td>
+<td id="5"></td>
+<td id="6"></td>
+</tr>
+<tr>
+<td id="7"></td>
+<td id="8"></td>
+<td id="9"></td>
+</tr>
+
+</main>
+</body>
+</html>
+
+
+
+<script>
+Let playerSymbol="x";
+Let gameEnded= false
+for (let i = 1; i <= 9; i++) {
+  document.getElementById(i.toString()).addEventListener(
+    "click", 
+    function() {
+         if (this.innerHTML === "" && !gameEnded) {
+  this.innerHTML = playerSymbol;
+this.classList.add(playerSymbol.toLowerCase());
+if (playerSymbol === "X")
+  playerSymbol = "O"
+else
+  playerSymbol = "X"
+}   
+ 
+}
+
+
+</script>
+
+
+</html> 
